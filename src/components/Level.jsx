@@ -41,16 +41,16 @@ function Texto({ position = [0, 0, 0] }) {
 }
 
 function FloorColider() {
-  return <CuboidCollider args={[14, 0.05, 14]} position={[0, -0.05, 2]} restitution={0.5} />
+  return <CuboidCollider args={[14, 0.05, 20]} position={[0, -0.05, 6]} restitution={0.5} />
 }
 
 function WallsColider() {
   return (
     <>
-      <CuboidCollider args={[12, 12, 0.05]} position={[0, 10, 13]}></CuboidCollider>
-      <CuboidCollider args={[0.05, 12, 12]} position={[12, 10, 2]}></CuboidCollider>
-      <CuboidCollider args={[0.05, 12, 12]} position={[-12, 10, 2]}></CuboidCollider>
-      <CuboidCollider args={[12, 12, 0.05]} position={[0, 10, -8]}></CuboidCollider>
+      <CuboidCollider args={[18, 12, 0.05]} position={[0, 10, 23]}></CuboidCollider>
+      <CuboidCollider args={[0.05, 12, 20]} position={[12, 10, 6]}></CuboidCollider>
+      <CuboidCollider args={[0.05, 12, 20]} position={[-12, 10, 6]}></CuboidCollider>
+      <CuboidCollider args={[18, 12, 0.05]} position={[0, 10, -8]}></CuboidCollider>
     </>
   )
 }
