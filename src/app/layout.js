@@ -4,7 +4,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Escalador",
+  title: "Globant Tower",
   description: "Escala la torre Globant",
   authors: [{ name: "Nico Battaglia" }],
   keywords: ["Next.js", "React", "JavaScript", "Three.js"],
