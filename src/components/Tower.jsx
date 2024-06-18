@@ -1,6 +1,5 @@
-import { useAnimations, useGLTF } from "@react-three/drei"
-import { CuboidCollider, Physics, RigidBody } from "@react-three/rapier"
-import { useEffect } from "react"
+import { useGLTF } from "@react-three/drei"
+import { RigidBody } from "@react-three/rapier"
 
 const Tower = () => {
   const model = useGLTF("/model/tower/scene.gltf")

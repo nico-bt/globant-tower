@@ -1,6 +1,5 @@
-import { useAnimations, useGLTF } from "@react-three/drei"
-import { CuboidCollider, Physics, RigidBody } from "@react-three/rapier"
-import { useEffect } from "react"
+import { useGLTF } from "@react-three/drei"
+import { RigidBody } from "@react-three/rapier"
 
 const Camion = ({ rotation = [0, 1.2, 0], position = [-8.5, -0.1, -5] }) => {
   const model = useGLTF("/model/camion/scene.gltf")

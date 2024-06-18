@@ -12,6 +12,8 @@ import Bombero from "./Bombero"
 import Camion from "./Camion"
 import Autos from "./Autos"
 import Batman from "./Batman"
+import Ibm from "./Ibm"
+import MessiLego from "./MessiLego"
 
 export default function App() {
   const map = useMemo(() => {
@@ -51,8 +53,10 @@ export default function App() {
               <Camion />
 
               <Autos />
+              <Ibm />
 
               <Batman type="fixed" rotation={[0, -0.25, 0]} position={[2.5, 16.79, -5.01]} />
+              <MessiLego />
             </Physics>
           </Suspense>
         </Canvas>

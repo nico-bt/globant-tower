@@ -39,7 +39,7 @@ function Player() {
       // Reset Position and velocities (Linear & Angular)
       playerRef.current.setLinvel({ x: 0, y: 0, z: 0 })
       playerRef.current.setAngvel({ x: 0, y: 0, z: 0 })
-      playerRef.current.setTranslation({ x: 0, y: 6, z: 0 })
+      playerRef.current.setTranslation({ x: 0, y: 3, z: 0 })
     }
 
     playerRef.current?.applyImpulse(impulse, true)
@@ -98,6 +98,18 @@ function Player() {
 
   const propsTexture = useTexture({ map: "/messi.jpg" })
 
+  const collisionHandle = (e) => {
+    // console.log(e.colliderObject.name)
+    const force = { x: 0, y: 0, z: 0 }
+
+    if (e.colliderObject.name === "Messi") {
+      playerRef.current.setLinvel({ x: 0, y: 0, z: 0 })
+      playerRef.current.setAngvel({ x: 0, y: 0, z: 0 })
+      playerRef.current?.applyImpulse({ x: 0.0165, y: 0.1, z: -0.0616 })
+      playerRef.current?.applyTorqueImpulse({ x: 0, y: 0.0002, z: 0 }, true)
+    }
+  }
+
   return (
     <RigidBody
       ref={playerRef}
@@ -107,6 +119,7 @@ function Player() {
       friction={1}
       linearDamping={0.5}
       angularDamping={0.5}
+      onCollisionEnter={collisionHandle}
     >
       <mesh castShadow>
         <sphereGeometry args={[0.1]} />

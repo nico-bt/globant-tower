@@ -1,6 +1,5 @@
-import { useAnimations, useGLTF } from "@react-three/drei"
-import { CuboidCollider, Physics, RigidBody } from "@react-three/rapier"
-import { useEffect } from "react"
+import { useGLTF } from "@react-three/drei"
+import { RigidBody } from "@react-three/rapier"
 
 const Bombero = ({ type = "dynamic", rotation = [0, 0.75, 0], position = [-4, 0, -3] }) => {
   const model = useGLTF("/model/bombero/scene.gltf")
